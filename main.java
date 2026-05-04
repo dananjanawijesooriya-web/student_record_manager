@@ -12,6 +12,7 @@ public class Main {
         deleteStudent("Alice");
         countStudents();
         searchStudent("Alice");
+        updateStudent("Jhon","Charlie");
     }
     static void addStudent(String name) {
         student.add(name);
@@ -43,5 +44,14 @@ public class Main {
             System.out.println("Student not found.");
         }
     }
-
+    static void updateStudent(String oldName, String newName) {
+        for (int i = 0; i < students.size(); i++) {
+            if (students.get(i).equalsIgnoreCase(oldName)) {
+                students.set(i, newName);
+                System.out.println(oldName + " updated to " + newName);
+                return;
+            }
+        }
+        System.out.println("Student not found.");
+    }
 }
