@@ -7,9 +7,17 @@ public class Main {
         addStudent("Alice");
         addStudent("Bob");
         addStudent("Jhon");
+
+        viewStudents();
     }
     static void addStudent(String name) {
         student.add(name);
         System.out.println(name + "added.");
+    }
+    static void viewStudents() {
+        System.out.println("Student List:");
+        for (String s : students) {
+        System.out.println(s);
+        }
     }
 }
